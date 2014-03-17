@@ -35,33 +35,26 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+  
     //Initialize the refresh control
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     
     //Configure refresh control
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self setRefreshControl:refreshControl];
-    [self.refreshControl setTintColor:UIColorFromRGB(0xC644FC)];
+//    [self.refreshControl setTintColor:UIColorFromRGB(0x1D62F0)];
     
-    int numberOfUsersToRandomlyGenerate = arc4random_uniform(5);
+    int numberOfUsersToRandomlyGenerate = arc4random_uniform(10);
     
     //Creates the JSON data object using contents of the URL that was generated in the step prior
-    NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@?results=%d", RANDOM_USER_ME_URL, numberOfUsersToRandomlyGenerate]]];
+    NSData *jsonData = [NSData dataWithContentsOfURL:
+                        [NSURL URLWithString:
+                     [NSString stringWithFormat:@"%@?results=%d", RANDOM_USER_ME_URL, numberOfUsersToRandomlyGenerate]]];
     NSError *error = nil;
-    if(jsonData == NULL){
-        NSLog(@"jsonData returned NULL!");
-    }
+    
     //Creates the NSDictionary that will serialize and hold	 the data from the JSON data object
     NSDictionary *randomlyGeneratedUserDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
-    NSLog(@"Error: %@", error);
     //Sets the NSDictionary equal to the JSON data file's 'results' array. This allows the dictionary to solely contain the 'results' array and nothing else.
     self.randomlyGeneratedUsersArray = [NSMutableArray array];
     self.randomlyGeneratedUsersArray = [randomlyGeneratedUserDictionary objectForKey:@"results"];
@@ -79,9 +72,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     //Creates the JSON data object using contents of the URL that was generated in the step prior
     NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@?results=%d", RANDOM_USER_ME_URL, numberOfUsersToRandomlyGenerate]]];
     NSError *error = nil;
-    if(jsonData != NULL){
-        NSLog(@"jsonData returned NULL!");
-    }
+    
     //Creates the NSDictionary that will serialize and hold the data from the JSON data object
     NSDictionary *randomlyGeneratedUserDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "277477BF189A1ED800146FB4"
-               BuildableName = "Random User Generator.app"
-               BlueprintName = "Random User Generator"
-               ReferencedContainer = "container:Random User Generator.xcodeproj">
+               BuildableName = "Fluky.app"
+               BlueprintName = "Fluky"
+               ReferencedContainer = "container:Fluky.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "277477DF189A1ED800146FB4"
-               BuildableName = "Random User GeneratorTests.xctest"
-               BlueprintName = "Random User GeneratorTests"
-               ReferencedContainer = "container:Random User Generator.xcodeproj">
+               BuildableName = "FlukyTests.xctest"
+               BlueprintName = "FlukyTests"
+               ReferencedContainer = "container:Fluky.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "277477BF189A1ED800146FB4"
-            BuildableName = "Random User Generator.app"
-            BlueprintName = "Random User Generator"
-            ReferencedContainer = "container:Random User Generator.xcodeproj">
+            BuildableName = "Fluky.app"
+            BlueprintName = "Fluky"
+            ReferencedContainer = "container:Fluky.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "277477BF189A1ED800146FB4"
-            BuildableName = "Random User Generator.app"
-            BlueprintName = "Random User Generator"
-            ReferencedContainer = "container:Random User Generator.xcodeproj">
+            BuildableName = "Fluky.app"
+            BlueprintName = "Fluky"
+            ReferencedContainer = "container:Fluky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "277477BF189A1ED800146FB4"
-            BuildableName = "Random User Generator.app"
-            BlueprintName = "Random User Generator"
-            ReferencedContainer = "container:Random User Generator.xcodeproj">
+            BuildableName = "Fluky.app"
+            BlueprintName = "Fluky"
+            ReferencedContainer = "container:Fluky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

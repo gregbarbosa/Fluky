@@ -44,22 +44,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		277477C0189A1ED800146FB4 /* Random User Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random User Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		277477C0189A1ED800146FB4 /* Fluky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fluky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277477C3189A1ED800146FB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		277477C5189A1ED800146FB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		277477C7189A1ED800146FB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		277477C9189A1ED800146FB4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		277477CD189A1ED800146FB4 /* Random User Generator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Random User Generator-Info.plist"; sourceTree = "<group>"; };
+		277477CD189A1ED800146FB4 /* Fluky-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fluky-Info.plist"; sourceTree = "<group>"; };
 		277477CF189A1ED800146FB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		277477D1189A1ED800146FB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		277477D3189A1ED800146FB4 /* Random User Generator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Random User Generator-Prefix.pch"; sourceTree = "<group>"; };
+		277477D3189A1ED800146FB4 /* Fluky-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fluky-Prefix.pch"; sourceTree = "<group>"; };
 		277477D4189A1ED800146FB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		277477D5189A1ED800146FB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		277477D8189A1ED800146FB4 /* Random_User_Generator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Random_User_Generator.xcdatamodel; sourceTree = "<group>"; };
 		277477DA189A1ED800146FB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		277477E0189A1ED800146FB4 /* Random User GeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Random User GeneratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		277477E0189A1ED800146FB4 /* FlukyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlukyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277477E1189A1ED800146FB4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		277477EA189A1ED800146FB4 /* Random User GeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Random User GeneratorTests-Info.plist"; sourceTree = "<group>"; };
+		277477EA189A1ED800146FB4 /* FlukyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlukyTests-Info.plist"; sourceTree = "<group>"; };
 		277477EC189A1ED800146FB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		277477EE189A1ED800146FB4 /* Random_User_GeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Random_User_GeneratorTests.m; sourceTree = "<group>"; };
 		277477F8189A1F0300146FB4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 		277477C1189A1ED800146FB4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				277477C0189A1ED800146FB4 /* Random User Generator.app */,
-				277477E0189A1ED800146FB4 /* Random User GeneratorTests.xctest */,
+				277477C0189A1ED800146FB4 /* Fluky.app */,
+				277477E0189A1ED800146FB4 /* FlukyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,10 +156,10 @@
 		277477CC189A1ED800146FB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				277477CD189A1ED800146FB4 /* Random User Generator-Info.plist */,
+				277477CD189A1ED800146FB4 /* Fluky-Info.plist */,
 				277477CE189A1ED800146FB4 /* InfoPlist.strings */,
 				277477D1189A1ED800146FB4 /* main.m */,
-				277477D3189A1ED800146FB4 /* Random User Generator-Prefix.pch */,
+				277477D3189A1ED800146FB4 /* Fluky-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			path = "Random User Generator";
@@ -177,7 +177,7 @@
 		277477E9189A1ED800146FB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				277477EA189A1ED800146FB4 /* Random User GeneratorTests-Info.plist */,
+				277477EA189A1ED800146FB4 /* FlukyTests-Info.plist */,
 				277477EB189A1ED800146FB4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -225,9 +225,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		277477BF189A1ED800146FB4 /* Random User Generator */ = {
+		277477BF189A1ED800146FB4 /* Fluky */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 277477F2189A1ED800146FB4 /* Build configuration list for PBXNativeTarget "Random User Generator" */;
+			buildConfigurationList = 277477F2189A1ED800146FB4 /* Build configuration list for PBXNativeTarget "Fluky" */;
 			buildPhases = (
 				E960B06D4B43474DBA9634B3 /* Check Pods Manifest.lock */,
 				277477BC189A1ED800146FB4 /* Sources */,
@@ -239,14 +239,14 @@
 			);
 			dependencies = (
 			);
-			name = "Random User Generator";
+			name = Fluky;
 			productName = "Random User Generator";
-			productReference = 277477C0189A1ED800146FB4 /* Random User Generator.app */;
+			productReference = 277477C0189A1ED800146FB4 /* Fluky.app */;
 			productType = "com.apple.product-type.application";
 		};
-		277477DF189A1ED800146FB4 /* Random User GeneratorTests */ = {
+		277477DF189A1ED800146FB4 /* FlukyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 277477F5189A1ED800146FB4 /* Build configuration list for PBXNativeTarget "Random User GeneratorTests" */;
+			buildConfigurationList = 277477F5189A1ED800146FB4 /* Build configuration list for PBXNativeTarget "FlukyTests" */;
 			buildPhases = (
 				277477DC189A1ED800146FB4 /* Sources */,
 				277477DD189A1ED800146FB4 /* Frameworks */,
@@ -257,9 +257,9 @@
 			dependencies = (
 				277477E7189A1ED800146FB4 /* PBXTargetDependency */,
 			);
-			name = "Random User GeneratorTests";
+			name = FlukyTests;
 			productName = "Random User GeneratorTests";
-			productReference = 277477E0189A1ED800146FB4 /* Random User GeneratorTests.xctest */;
+			productReference = 277477E0189A1ED800146FB4 /* FlukyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -271,12 +271,15 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = PolaritySoftware;
 				TargetAttributes = {
+					277477BF189A1ED800146FB4 = {
+						DevelopmentTeam = T8NWKW43JH;
+					};
 					277477DF189A1ED800146FB4 = {
 						TestTargetID = 277477BF189A1ED800146FB4;
 					};
 				};
 			};
-			buildConfigurationList = 277477BB189A1ED800146FB4 /* Build configuration list for PBXProject "Random User Generator" */;
+			buildConfigurationList = 277477BB189A1ED800146FB4 /* Build configuration list for PBXProject "Fluky" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -288,8 +291,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				277477BF189A1ED800146FB4 /* Random User Generator */,
-				277477DF189A1ED800146FB4 /* Random User GeneratorTests */,
+				277477BF189A1ED800146FB4 /* Fluky */,
+				277477DF189A1ED800146FB4 /* FlukyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -379,7 +382,7 @@
 /* Begin PBXTargetDependency section */
 		277477E7189A1ED800146FB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 277477BF189A1ED800146FB4 /* Random User Generator */;
+			target = 277477BF189A1ED800146FB4 /* Fluky */;
 			targetProxy = 277477E6189A1ED800146FB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -408,7 +411,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -447,7 +449,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -484,9 +485,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Random User Generator/Random User Generator-Prefix.pch";
-				INFOPLIST_FILE = "Random User Generator/Random User Generator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Random User Generator/Fluky-Prefix.pch";
+				INFOPLIST_FILE = "Random User Generator/Fluky-Info.plist";
+				PRODUCT_NAME = Fluky;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -499,9 +500,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Random User Generator/Random User Generator-Prefix.pch";
-				INFOPLIST_FILE = "Random User Generator/Random User Generator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Random User Generator/Fluky-Prefix.pch";
+				INFOPLIST_FILE = "Random User Generator/Fluky-Info.plist";
+				PRODUCT_NAME = Fluky;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -509,7 +510,6 @@
 		277477F6189A1ED800146FB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Random User Generator.app/Random User Generator";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -522,8 +522,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Random User GeneratorTests/Random User GeneratorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Random User GeneratorTests/FlukyTests-Info.plist";
+				PRODUCT_NAME = FlukyTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -532,7 +532,6 @@
 		277477F7189A1ED800146FB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Random User Generator.app/Random User Generator";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -541,8 +540,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Random User Generator/Random User Generator-Prefix.pch";
-				INFOPLIST_FILE = "Random User GeneratorTests/Random User GeneratorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Random User GeneratorTests/FlukyTests-Info.plist";
+				PRODUCT_NAME = FlukyTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -551,7 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		277477BB189A1ED800146FB4 /* Build configuration list for PBXProject "Random User Generator" */ = {
+		277477BB189A1ED800146FB4 /* Build configuration list for PBXProject "Fluky" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				277477F0189A1ED800146FB4 /* Debug */,
@@ -560,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		277477F2189A1ED800146FB4 /* Build configuration list for PBXNativeTarget "Random User Generator" */ = {
+		277477F2189A1ED800146FB4 /* Build configuration list for PBXNativeTarget "Fluky" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				277477F3189A1ED800146FB4 /* Debug */,
@@ -569,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		277477F5189A1ED800146FB4 /* Build configuration list for PBXNativeTarget "Random User GeneratorTests" */ = {
+		277477F5189A1ED800146FB4 /* Build configuration list for PBXNativeTarget "FlukyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				277477F6189A1ED800146FB4 /* Debug */,
