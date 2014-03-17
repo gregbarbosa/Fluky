@@ -17,14 +17,11 @@ PODS:
   - AFNetworking/Serialization (2.1.0)
   - AFNetworking/UIKit (2.1.0):
     - AFNetworking/NSURLConnection
-  - TestFlightSDK (2.2.1-beta)
 
 DEPENDENCIES:
   - AFNetworking
-  - TestFlightSDK
 
 SPEC CHECKSUMS:
   AFNetworking: c7d7901a83f631414c7eda1737261f696101a5cd
-  TestFlightSDK: 4249c2f70e621bcfbdebf019073169c8fe36be13
 
 COCOAPODS: 0.29.0
