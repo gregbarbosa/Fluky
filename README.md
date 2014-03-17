@@ -1,0 +1,4 @@
+Fluky
+=====
+
+pod install 'AFNetworking'
