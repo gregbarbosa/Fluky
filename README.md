@@ -1,4 +1,4 @@
 Fluky
 =====
 
-pod install 'AFNetworking'
+To be filled out.
