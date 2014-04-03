@@ -20,8 +20,6 @@
 		277477E3189A1ED800146FB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C3189A1ED800146FB4 /* Foundation.framework */; };
 		277477E4189A1ED800146FB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C7189A1ED800146FB4 /* UIKit.framework */; };
 		277477E5189A1ED800146FB4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C9189A1ED800146FB4 /* CoreData.framework */; };
-		277477ED189A1ED800146FB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 277477EB189A1ED800146FB4 /* InfoPlist.strings */; };
-		277477EF189A1ED800146FB4 /* Random_User_GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277477EE189A1ED800146FB4 /* Random_User_GeneratorTests.m */; };
 		277477F9189A1F0300146FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277477F8189A1F0300146FB4 /* Main.storyboard */; };
 		277477FC189A1F6800146FB4 /* GeneratedUsersTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 277477FB189A1F6800146FB4 /* GeneratedUsersTableView.m */; };
 		27747801189A200C00146FB4 /* RandomlyGeneratedUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27747800189A200C00146FB4 /* RandomlyGeneratedUser.m */; };
@@ -75,9 +73,6 @@
 		277477DA189A1ED800146FB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		277477E0189A1ED800146FB4 /* FlukyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlukyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277477E1189A1ED800146FB4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		277477EA189A1ED800146FB4 /* FlukyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlukyTests-Info.plist"; sourceTree = "<group>"; };
-		277477EC189A1ED800146FB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		277477EE189A1ED800146FB4 /* Random_User_GeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Random_User_GeneratorTests.m; sourceTree = "<group>"; };
 		277477F8189A1F0300146FB4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		277477FA189A1F6800146FB4 /* GeneratedUsersTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeneratedUsersTableView.h; path = Controllers/GeneratedUsersTableView.h; sourceTree = "<group>"; };
 		277477FB189A1F6800146FB4 /* GeneratedUsersTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeneratedUsersTableView.m; path = Controllers/GeneratedUsersTableView.m; sourceTree = "<group>"; };
@@ -125,7 +120,6 @@
 		27E2241E18D9F77400CC72D6 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		27E2241F18D9F77400CC72D6 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		27E2242018D9F77400CC72D6 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		ED08E274A3964C21BB41A3A9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +153,6 @@
 			children = (
 				277477CB189A1ED800146FB4 /* Random User Generator */,
 				277477CC189A1ED800146FB4 /* Supporting Files */,
-				277477E8189A1ED800146FB4 /* Random User GeneratorTests */,
 				277477C2189A1ED800146FB4 /* Frameworks */,
 				277477C1189A1ED800146FB4 /* Products */,
 				27E2240F18D9F77400CC72D6 /* UIKit+AFNetworking */,
@@ -184,7 +177,6 @@
 				277477C7189A1ED800146FB4 /* UIKit.framework */,
 				277477C9189A1ED800146FB4 /* CoreData.framework */,
 				277477E1189A1ED800146FB4 /* XCTest.framework */,
-				ED08E274A3964C21BB41A3A9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,24 +206,6 @@
 			);
 			name = "Supporting Files";
 			path = "Random User Generator";
-			sourceTree = "<group>";
-		};
-		277477E8189A1ED800146FB4 /* Random User GeneratorTests */ = {
-			isa = PBXGroup;
-			children = (
-				277477EE189A1ED800146FB4 /* Random_User_GeneratorTests.m */,
-				277477E9189A1ED800146FB4 /* Supporting Files */,
-			);
-			path = "Random User GeneratorTests";
-			sourceTree = "<group>";
-		};
-		277477E9189A1ED800146FB4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				277477EA189A1ED800146FB4 /* FlukyTests-Info.plist */,
-				277477EB189A1ED800146FB4 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		277477FD189A1F6C00146FB4 /* Controllers */ = {
@@ -416,7 +390,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				277477ED189A1ED800146FB4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +430,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				277477EF189A1ED800146FB4 /* Random_User_GeneratorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,14 +448,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				277477CF189A1ED800146FB4 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		277477EB189A1ED800146FB4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				277477EC189A1ED800146FB4 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

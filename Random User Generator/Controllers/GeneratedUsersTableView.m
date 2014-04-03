@@ -10,7 +10,7 @@
 #import "RandomlyGeneratedUser.h"
 #import "UserTableViewCell.h"
 
-#define RANDOM_USER_ME_URL @"http://api.randomuser.me/0.3/"
+#define RANDOM_USER_ME_URL @"http://api.randomuser.me/0.3.2/"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -35,15 +35,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  
+    [self generateRandomUsers];
+    
     //Initialize the refresh control
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    
-    //Configure refresh control
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self setRefreshControl:refreshControl];
-//    [self.refreshControl setTintColor:UIColorFromRGB(0x1D62F0)];
-    
+}
+- (void) generateRandomUsers{
     int numberOfUsersToRandomlyGenerate = arc4random_uniform(10);
     
     //Creates the JSON data object using contents of the URL that was generated in the step prior
@@ -62,26 +61,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (void)refresh:(id)sender
 {
-    //Generates a random number between 0 and 5, and will continue to generate until the number is not 0.
-    int numberOfUsersToRandomlyGenerate;
-    do{
-        numberOfUsersToRandomlyGenerate = arc4random_uniform(5);
-    }
-    while(numberOfUsersToRandomlyGenerate == 0);
-    
-    //Creates the JSON data object using contents of the URL that was generated in the step prior
-    NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@?results=%d", RANDOM_USER_ME_URL, numberOfUsersToRandomlyGenerate]]];
-    NSError *error = nil;
-    
-    //Creates the NSDictionary that will serialize and hold the data from the JSON data object
-    NSDictionary *randomlyGeneratedUserDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
-    
-    //Sets the NSDictionary equal to the JSON data file's 'results' array. This allows the dictionary to solely contain the 'results' array and nothing else.
-    self.randomlyGeneratedUsersArray = [NSMutableArray array];
-    self.randomlyGeneratedUsersArray = [randomlyGeneratedUserDictionary objectForKey:@"results"];
-
-    [self.tableView reloadData];   
-
+    [self generateRandomUsers];
+    [self.tableView reloadData];
     [(UIRefreshControl *)sender endRefreshing];
 }
 
@@ -109,7 +90,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
     //Grabs the picture URL to eventually set it as the cell's imageView
     NSURL *url = [NSURL URLWithString:[generatedUsers valueForKeyPath:@"user.picture"]];
-
     //Sets cell contents to a truncation of user's first and last name, the user's location, and the user's picture
     cell.userName.text = [NSString stringWithFormat:@"%@ %@", [generatedUsers valueForKeyPath:@"user.name.first"], [generatedUsers valueForKeyPath:@"user.name.last"]];
     cell.userAddress.text = [generatedUsers valueForKeyPath:@"user.location.street"];
@@ -125,6 +105,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
