@@ -15,7 +15,6 @@
 		277477D2189A1ED800146FB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 277477D1189A1ED800146FB4 /* main.m */; };
 		277477D6189A1ED800146FB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 277477D5189A1ED800146FB4 /* AppDelegate.m */; };
 		277477D9189A1ED800146FB4 /* Random_User_Generator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 277477D7189A1ED800146FB4 /* Random_User_Generator.xcdatamodeld */; };
-		277477DB189A1ED800146FB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277477DA189A1ED800146FB4 /* Images.xcassets */; };
 		277477E2189A1ED800146FB4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477E1189A1ED800146FB4 /* XCTest.framework */; };
 		277477E3189A1ED800146FB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C3189A1ED800146FB4 /* Foundation.framework */; };
 		277477E4189A1ED800146FB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C7189A1ED800146FB4 /* UIKit.framework */; };
@@ -66,7 +65,6 @@
 		277477D4189A1ED800146FB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		277477D5189A1ED800146FB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		277477D8189A1ED800146FB4 /* Random_User_Generator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Random_User_Generator.xcdatamodel; sourceTree = "<group>"; };
-		277477DA189A1ED800146FB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		277477E0189A1ED800146FB4 /* FlukyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlukyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277477E1189A1ED800146FB4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		277477F8189A1F0300146FB4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
@@ -147,8 +145,6 @@
 				277477CC189A1ED800146FB4 /* Supporting Files */,
 				277477C2189A1ED800146FB4 /* Frameworks */,
 				277477C1189A1ED800146FB4 /* Products */,
-				27E2240F18D9F77400CC72D6 /* UIKit+AFNetworking */,
-				27E223F218D9F6C700CC72D6 /* AFNetworking */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,7 +177,6 @@
 				277477FD189A1F6C00146FB4 /* Controllers */,
 				277477D4189A1ED800146FB4 /* AppDelegate.h */,
 				277477D5189A1ED800146FB4 /* AppDelegate.m */,
-				277477DA189A1ED800146FB4 /* Images.xcassets */,
 				277477D7189A1ED800146FB4 /* Random_User_Generator.xcdatamodeld */,
 			);
 			path = "Random User Generator";
@@ -190,6 +185,7 @@
 		277477CC189A1ED800146FB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				27F99A6019039F2100C2D440 /* AFNetworking */,
 				277477CD189A1ED800146FB4 /* Fluky-Info.plist */,
 				277477CE189A1ED800146FB4 /* InfoPlist.strings */,
 				277477D1189A1ED800146FB4 /* main.m */,
@@ -242,7 +238,8 @@
 				27E2240418D9F6C700CC72D6 /* AFURLSessionManager.h */,
 				27E2240518D9F6C700CC72D6 /* AFURLSessionManager.m */,
 			);
-			path = AFNetworking;
+			name = AFNetworking;
+			path = ../AFNetworking;
 			sourceTree = "<group>";
 		};
 		27E2240F18D9F77400CC72D6 /* UIKit+AFNetworking */ = {
@@ -267,7 +264,16 @@
 				27E2242018D9F77400CC72D6 /* UIWebView+AFNetworking.m */,
 			);
 			name = "UIKit+AFNetworking";
-			path = "AFNetworking/UIKit+AFNetworking";
+			path = "../AFNetworking/UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		27F99A6019039F2100C2D440 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				27E223F218D9F6C700CC72D6 /* AFNetworking */,
+				27E2240F18D9F77400CC72D6 /* UIKit+AFNetworking */,
+			);
+			name = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				277477D0189A1ED800146FB4 /* InfoPlist.strings in Resources */,
-				277477DB189A1ED800146FB4 /* Images.xcassets in Resources */,
 				277477F9189A1F0300146FB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
