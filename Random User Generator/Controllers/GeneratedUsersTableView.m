@@ -13,24 +13,15 @@
 #define RANDOM_USER_ME_URL @"http://api.randomuser.me/0.3.2/"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
-colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
-green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
-blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+                                    colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+                                    green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+                                    blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface GeneratedUsersTableView ()
 
 @end
 
 @implementation GeneratedUsersTableView
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -42,8 +33,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self setRefreshControl:refreshControl];
 }
+
 - (void) generateRandomUsers{
-    int numberOfUsersToRandomlyGenerate = arc4random_uniform(10);
+    int numberOfUsersToRandomlyGenerate = arc4random_uniform(10)+1;
+//    NSLog(@"%d", numberOfUsersToRandomlyGenerate);
     
     //Creates the JSON data object using contents of the URL that was generated in the step prior
     NSData *jsonData = [NSData dataWithContentsOfURL:
@@ -57,6 +50,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     //Sets the NSDictionary equal to the JSON data file's 'results' array. This allows the dictionary to solely contain the 'results' array and nothing else.
     self.randomlyGeneratedUsersArray = [NSMutableArray array];
     self.randomlyGeneratedUsersArray = [randomlyGeneratedUserDictionary objectForKey:@"results"];
+//    NSLog(@"%@", self.randomlyGeneratedUsersArray);
 }
 
 - (void)refresh:(id)sender
@@ -70,16 +64,17 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return [self.randomlyGeneratedUsersArray count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -90,12 +85,21 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     //Grabs the picture URL to eventually set it as the cell's imageView
     NSURL *url = [NSURL URLWithString:[generatedUsers valueForKeyPath:@"user.picture"]];
-    //Sets cell contents to a truncation of user's first and last name, the user's location, and the user's picture
-    cell.userName.text = [NSString stringWithFormat:@"%@ %@", [generatedUsers valueForKeyPath:@"user.name.first"], [generatedUsers valueForKeyPath:@"user.name.last"]];
-    cell.userAddress.text = [generatedUsers valueForKeyPath:@"user.location.street"];
-    cell.userCityStateZip.text = [NSString stringWithFormat:@"%@, %@ %@", [generatedUsers valueForKeyPath:@"user.location.city"], [generatedUsers valueForKeyPath:@"user.location.state"], [generatedUsers valueForKeyPath:@"user.location.zip"]];
-    [cell.userProfileImage setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
     
+    //Sets cell contents to a truncation of user's first and last name, the user's location, and the user's picture
+    cell.userName.text = [NSString stringWithFormat:@"%@ %@",
+                          [generatedUsers valueForKeyPath:@"user.name.first"],
+                          [generatedUsers valueForKeyPath:@"user.name.last"]];
+    cell.userName.text = [cell.userName.text capitalizedString];
+    
+    cell.userAddress.text = [generatedUsers valueForKeyPath:@"user.location.street"];
+    cell.userAddress.text = [cell.userAddress.text capitalizedString];
+    
+    cell.userCityStateZip.text = [NSString stringWithFormat:@"%@, %@ %@", [generatedUsers valueForKeyPath:@"user.location.city"], [generatedUsers valueForKeyPath:@"user.location.state"], [generatedUsers valueForKeyPath:@"user.location.zip"]];
+
+    cell.userCityStateZip.text = [cell.userCityStateZip.text capitalizedString];
+    [cell.userProfileImage setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
+
     //Creates circular user profile image
     CALayer *imageLayer = cell.userProfileImage.layer;
     [imageLayer setCornerRadius:cell.userProfileImage.layer.bounds.size.height/2];
@@ -104,43 +108,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     return cell;
 }
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
-}
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 - (void)didReceiveMemoryWarning
 {
