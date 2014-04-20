@@ -6,7 +6,7 @@ Make sure you have an active data connection, and pull to refresh to generate ne
 Because of a limitation of the API, the maximum number of random users to generate is 10.
 
 ## Example
-![Screenshot](http://f.cl.ly/items/460d1v2C2t1Y3p3B3C3v/Random%20Users.png "Screenshot")
+![Screenshot](http://f.cl.ly/items/2b2M3a0k0d1N0N473W04/Random%20Users.png "Screenshot")
 
 ## About
 The app had been made in a few hours as I learned my way through using CocoaPods, AFNetworking, and JSON serialization. It proved useful when I needed to randomly generate multiple users while working on some other projects. The code is extremely rough, but it did the job.
