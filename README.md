@@ -1,18 +1,15 @@
 # Fluky
+An app to randomly generator users. Good for prototyping or just getting some users made up.
 
-A random user generator app. Useful for when you need multiple random users generated either for prototyping or mockups on the go. 
+## Use
+Make sure you have an active data connection, and pull to refresh to generate new users when desired. 
+Because of a limitation of the API, the maximum number of random users to generate is 10.
 
 ## Example
-[screenshot here](http://wayfinder.co/pathways/53076566da97d9aa54000036/using-sketch-like-a-boss)
+![Screenshot](http://f.cl.ly/items/460d1v2C2t1Y3p3B3C3v/Random%20Users.png "Screenshot")
 
-## Installation
-The application relies on AFNetworking using [CocoaPods](http://guides.cocoapods.org/using/using-cocoapods.html#creating-a-new-xcode-project-with-cocoapods).
-
-```
-pod install 'AFNetworking'
-```
 ## About
-The app had been made in a few hours as I learned my way through using CocoaPods, AFNetworking, and JSON serialization. It proved useful when I needed to randomly generate multiple users while working on some other projects. The code is rough, and I will clean it up as time permits.
+The app had been made in a few hours as I learned my way through using CocoaPods, AFNetworking, and JSON serialization. It proved useful when I needed to randomly generate multiple users while working on some other projects. The code is extremely rough, but it did the job.
 
 ## Credits
 Major credit goes to the team at [@randomapi](https://twitter.com/randomapi). Their small API helped me challenge and learn upon some ideas I had in mind. 
