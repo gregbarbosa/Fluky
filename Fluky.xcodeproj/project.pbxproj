@@ -23,6 +23,7 @@
 		277477FC189A1F6800146FB4 /* GeneratedUsersTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 277477FB189A1F6800146FB4 /* GeneratedUsersTableView.m */; };
 		27747801189A200C00146FB4 /* RandomlyGeneratedUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27747800189A200C00146FB4 /* RandomlyGeneratedUser.m */; };
 		27747804189A211900146FB4 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27747803189A211900146FB4 /* UserTableViewCell.m */; };
+		277DD8A91908DF26006749BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277DD8A81908DF26006749BC /* Images.xcassets */; };
 		27E2240618D9F6C700CC72D6 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E223F418D9F6C700CC72D6 /* AFHTTPRequestOperation.m */; };
 		27E2240718D9F6C700CC72D6 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E223F618D9F6C700CC72D6 /* AFHTTPRequestOperationManager.m */; };
 		27E2240818D9F6C700CC72D6 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E223F818D9F6C700CC72D6 /* AFHTTPSessionManager.m */; };
@@ -74,6 +75,7 @@
 		27747800189A200C00146FB4 /* RandomlyGeneratedUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomlyGeneratedUser.m; path = Models/RandomlyGeneratedUser.m; sourceTree = "<group>"; };
 		27747802189A211900146FB4 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserTableViewCell.h; path = Models/UserTableViewCell.h; sourceTree = "<group>"; };
 		27747803189A211900146FB4 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserTableViewCell.m; path = Models/UserTableViewCell.m; sourceTree = "<group>"; };
+		277DD8A81908DF26006749BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27E223F318D9F6C700CC72D6 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		27E223F418D9F6C700CC72D6 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		27E223F518D9F6C700CC72D6 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				277477D4189A1ED800146FB4 /* AppDelegate.h */,
 				277477D5189A1ED800146FB4 /* AppDelegate.m */,
 				277477D7189A1ED800146FB4 /* Random_User_Generator.xcdatamodeld */,
+				277DD8A81908DF26006749BC /* Images.xcassets */,
 			);
 			path = "Random User Generator";
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				277477D0189A1ED800146FB4 /* InfoPlist.strings in Resources */,
+				277DD8A91908DF26006749BC /* Images.xcassets in Resources */,
 				277477F9189A1F0300146FB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,12 +10,8 @@
 
 @interface RandomlyGeneratedUser : NSObject
 
-@property (nonatomic, strong) NSString *userFirstName;
-@property (nonatomic, strong) NSString *userLastName;
 @property (nonatomic, strong) NSString *userFullName;
 @property (nonatomic, strong) NSString *userStreetAddress;
-@property (nonatomic, strong) NSString *userImage;
-
-- (NSURL *) userImageURL;
+@property (nonatomic, strong) NSString *userCityStateZip;
 
 @end

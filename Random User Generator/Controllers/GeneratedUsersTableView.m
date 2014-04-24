@@ -80,24 +80,24 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
+    RandomlyGeneratedUser *randomlyGeneratedUser = [[RandomlyGeneratedUser alloc] init];
+    
     UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSDictionary *generatedUsers = [self.randomlyGeneratedUsersArray objectAtIndex:indexPath.row];
     
     //Grabs the picture URL to eventually set it as the cell's imageView
     NSURL *url = [NSURL URLWithString:[generatedUsers valueForKeyPath:@"user.picture"]];
     
-    //Sets cell contents to a truncation of user's first and last name, the user's location, and the user's picture
-    cell.userName.text = [NSString stringWithFormat:@"%@ %@",
-                          [generatedUsers valueForKeyPath:@"user.name.first"],
-                          [generatedUsers valueForKeyPath:@"user.name.last"]];
-    cell.userName.text = [cell.userName.text capitalizedString];
-    
-    cell.userAddress.text = [generatedUsers valueForKeyPath:@"user.location.street"];
-    cell.userAddress.text = [cell.userAddress.text capitalizedString];
-    
-    cell.userCityStateZip.text = [NSString stringWithFormat:@"%@, %@ %@", [generatedUsers valueForKeyPath:@"user.location.city"], [generatedUsers valueForKeyPath:@"user.location.state"], [generatedUsers valueForKeyPath:@"user.location.zip"]];
+    randomlyGeneratedUser.userFullName = [NSString stringWithFormat:@"%@ %@",
+                                           [generatedUsers valueForKeyPath:@"user.name.first"],
+                                           [generatedUsers valueForKeyPath:@"user.name.last"]];
+    randomlyGeneratedUser.userStreetAddress = [generatedUsers valueForKeyPath:@"user.location.street"];
+    randomlyGeneratedUser.userCityStateZip = [NSString stringWithFormat:@"%@, %@ %@", [generatedUsers valueForKeyPath:@"user.location.city"], [generatedUsers valueForKeyPath:@"user.location.state"], [generatedUsers valueForKeyPath:@"user.location.zip"]];
 
-    cell.userCityStateZip.text = [cell.userCityStateZip.text capitalizedString];
+    //Sets cell contents to a truncation of user's first and last name, the user's location, and the user's picture
+    cell.userName.text = [randomlyGeneratedUser.userFullName capitalizedString];
+    cell.userAddress.text = [randomlyGeneratedUser.userStreetAddress capitalizedString];
+    cell.userCityStateZip.text = [randomlyGeneratedUser.userCityStateZip capitalizedString];
     [cell.userProfileImage setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
 
     //Creates circular user profile image

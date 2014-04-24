@@ -10,8 +10,4 @@
 
 @implementation RandomlyGeneratedUser
 
-- (NSURL *) userImageURL{
-    return [NSURL URLWithString:self.userImage];
-}
-
 @end
