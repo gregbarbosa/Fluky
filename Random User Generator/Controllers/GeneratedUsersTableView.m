@@ -10,7 +10,7 @@
 #import "RandomlyGeneratedUser.h"
 #import "UserTableViewCell.h"
 
-#define RANDOM_USER_ME_URL @"http://api.randomuser.me/0.3.2/"
+#define RANDOM_USER_ME_URL @"http://api.randomuser.me/0.4/"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
                                     colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -35,7 +35,7 @@
 }
 
 - (void) generateRandomUsers{
-    int numberOfUsersToRandomlyGenerate = arc4random_uniform(10)+1;
+    int numberOfUsersToRandomlyGenerate = arc4random_uniform(20)+1;
 //    NSLog(@"%d", numberOfUsersToRandomlyGenerate);
     
     //Creates the JSON data object using contents of the URL that was generated in the step prior
