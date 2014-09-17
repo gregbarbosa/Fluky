@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		276E01B51919F40C001C961D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276E01B41919F40C001C961D /* Images.xcassets */; };
 		277477C4189A1ED800146FB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C3189A1ED800146FB4 /* Foundation.framework */; };
 		277477C6189A1ED800146FB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C5189A1ED800146FB4 /* CoreGraphics.framework */; };
 		277477C8189A1ED800146FB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C7189A1ED800146FB4 /* UIKit.framework */; };
@@ -23,7 +24,7 @@
 		277477FC189A1F6800146FB4 /* GeneratedUsersTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 277477FB189A1F6800146FB4 /* GeneratedUsersTableView.m */; };
 		27747801189A200C00146FB4 /* RandomlyGeneratedUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27747800189A200C00146FB4 /* RandomlyGeneratedUser.m */; };
 		27747804189A211900146FB4 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27747803189A211900146FB4 /* UserTableViewCell.m */; };
-		277DD8A91908DF26006749BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277DD8A81908DF26006749BC /* Images.xcassets */; };
+		27DED64819C935110037F053 /* TTAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DED64719C935110037F053 /* TTAbout.swift */; };
 		27E2240618D9F6C700CC72D6 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E223F418D9F6C700CC72D6 /* AFHTTPRequestOperation.m */; };
 		27E2240718D9F6C700CC72D6 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E223F618D9F6C700CC72D6 /* AFHTTPRequestOperationManager.m */; };
 		27E2240818D9F6C700CC72D6 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E223F818D9F6C700CC72D6 /* AFHTTPSessionManager.m */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		275C88F819C7FB3B00A61878 /* Fluky-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fluky-Bridging-Header.h"; sourceTree = "<group>"; };
+		276E01B41919F40C001C961D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		277477C0189A1ED800146FB4 /* Fluky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fluky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277477C3189A1ED800146FB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		277477C5189A1ED800146FB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,7 +78,7 @@
 		27747800189A200C00146FB4 /* RandomlyGeneratedUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomlyGeneratedUser.m; path = Models/RandomlyGeneratedUser.m; sourceTree = "<group>"; };
 		27747802189A211900146FB4 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserTableViewCell.h; path = Models/UserTableViewCell.h; sourceTree = "<group>"; };
 		27747803189A211900146FB4 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserTableViewCell.m; path = Models/UserTableViewCell.m; sourceTree = "<group>"; };
-		277DD8A81908DF26006749BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		27DED64719C935110037F053 /* TTAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTAbout.swift; sourceTree = "<group>"; };
 		27E223F318D9F6C700CC72D6 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		27E223F418D9F6C700CC72D6 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		27E223F518D9F6C700CC72D6 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -174,13 +177,13 @@
 		277477CB189A1ED800146FB4 /* Random User Generator */ = {
 			isa = PBXGroup;
 			children = (
+				276E01B41919F40C001C961D /* Images.xcassets */,
 				277477F8189A1F0300146FB4 /* Main.storyboard */,
 				277477FE189A1F7E00146FB4 /* Models */,
 				277477FD189A1F6C00146FB4 /* Controllers */,
 				277477D4189A1ED800146FB4 /* AppDelegate.h */,
 				277477D5189A1ED800146FB4 /* AppDelegate.m */,
 				277477D7189A1ED800146FB4 /* Random_User_Generator.xcdatamodeld */,
-				277DD8A81908DF26006749BC /* Images.xcassets */,
 			);
 			path = "Random User Generator";
 			sourceTree = "<group>";
@@ -203,6 +206,8 @@
 			children = (
 				277477FA189A1F6800146FB4 /* GeneratedUsersTableView.h */,
 				277477FB189A1F6800146FB4 /* GeneratedUsersTableView.m */,
+				275C88F819C7FB3B00A61878 /* Fluky-Bridging-Header.h */,
+				27DED64719C935110037F053 /* TTAbout.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				277477BC189A1ED800146FB4 /* Sources */,
 				277477BD189A1ED800146FB4 /* Frameworks */,
 				277477BE189A1ED800146FB4 /* Resources */,
+				27D6863419C7F8E100EF70E9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -327,7 +333,7 @@
 				ORGANIZATIONNAME = PolaritySoftware;
 				TargetAttributes = {
 					277477BF189A1ED800146FB4 = {
-						DevelopmentTeam = T8NWKW43JH;
+						DevelopmentTeam = 6TFBL9XBMK;
 					};
 					277477DF189A1ED800146FB4 = {
 						TestTargetID = 277477BF189A1ED800146FB4;
@@ -357,8 +363,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276E01B51919F40C001C961D /* Images.xcassets in Resources */,
 				277477D0189A1ED800146FB4 /* InfoPlist.strings in Resources */,
-				277DD8A91908DF26006749BC /* Images.xcassets in Resources */,
 				277477F9189A1F0300146FB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +378,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27D6863419C7F8E100EF70E9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#\n# Set the build number to the current git commit count.\n# If we're using the Dev scheme, then we'll suffix the build\n# number with the current branch name, to make collisions\n# far less likely across feature branches.\n# Based on: http://w3facility.info/question/how-do-i-force-xcode-to-rebuild-the-info-plist-file-in-my-project-every-time-i-build-the-project/\n#\ngit=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list --all |wc -l`\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nfi\necho \"Updated ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		277477BC189A1ED800146FB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -380,6 +402,7 @@
 				27E2240E18D9F6C700CC72D6 /* AFURLSessionManager.m in Sources */,
 				27747801189A200C00146FB4 /* RandomlyGeneratedUser.m in Sources */,
 				277477FC189A1F6800146FB4 /* GeneratedUsersTableView.m in Sources */,
+				27DED64819C935110037F053 /* TTAbout.swift in Sources */,
 				27E2240918D9F6C700CC72D6 /* AFNetworkReachabilityManager.m in Sources */,
 				27E2242118D9F77400CC72D6 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				27747804189A211900146FB4 /* UserTableViewCell.m in Sources */,
@@ -507,12 +530,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Random User Generator/Fluky-Prefix.pch";
 				INFOPLIST_FILE = "Random User Generator/Fluky-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Fluky;
+				SWIFT_OBJC_BRIDGING_HEADER = "Random User Generator/Fluky-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -522,12 +549,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Random User Generator/Fluky-Prefix.pch";
 				INFOPLIST_FILE = "Random User Generator/Fluky-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Fluky;
+				SWIFT_OBJC_BRIDGING_HEADER = "Random User Generator/Fluky-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

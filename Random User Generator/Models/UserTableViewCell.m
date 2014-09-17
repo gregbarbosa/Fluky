@@ -25,4 +25,11 @@
 
     // Configure the view for the selected state
 }
+
+- (void) layoutSubviews {
+    [super layoutSubviews];
+    self.imageView.bounds = CGRectMake(0,0,70,70);
+    self.imageView.layer.cornerRadius = 70/2;
+    self.imageView.layer.masksToBounds = true;
+}
 @end

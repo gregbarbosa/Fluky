@@ -10,7 +10,8 @@
 #import "RandomlyGeneratedUser.h"
 #import "UserTableViewCell.h"
 
-#define RANDOM_USER_ME_URL @"http://api.randomuser.me/0.4/"
+#define RANDOM_USER_ME_URL @"http://api.randomuser.me/0.4.1/"
+//#define RANDOM_USER_ME_URL @"http://api.randomuser.me/?lego/"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
                                     colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -35,22 +36,19 @@
 }
 
 - (void) generateRandomUsers{
-    int numberOfUsersToRandomlyGenerate = arc4random_uniform(20)+1;
-//    NSLog(@"%d", numberOfUsersToRandomlyGenerate);
-    
+    int numberOfUsersToRandomlyGenerate = arc4random_uniform(10)+1;
     //Creates the JSON data object using contents of the URL that was generated in the step prior
     NSData *jsonData = [NSData dataWithContentsOfURL:
                         [NSURL URLWithString:
                          [NSString stringWithFormat:@"%@?results=%d", RANDOM_USER_ME_URL, numberOfUsersToRandomlyGenerate]]];
     NSError *error = nil;
-    
+
     //Creates the NSDictionary that will serialize and hold	 the data from the JSON data object
     NSDictionary *randomlyGeneratedUserDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
-    
+
     //Sets the NSDictionary equal to the JSON data file's 'results' array. This allows the dictionary to solely contain the 'results' array and nothing else.
     self.randomlyGeneratedUsersArray = [NSMutableArray array];
     self.randomlyGeneratedUsersArray = [randomlyGeneratedUserDictionary objectForKey:@"results"];
-//    NSLog(@"%@", self.randomlyGeneratedUsersArray);
 }
 
 - (void)refresh:(id)sender
@@ -84,10 +82,7 @@
     
     UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSDictionary *generatedUsers = [self.randomlyGeneratedUsersArray objectAtIndex:indexPath.row];
-    
-    //Grabs the picture URL to eventually set it as the cell's imageView
-    NSURL *url = [NSURL URLWithString:[generatedUsers valueForKeyPath:@"user.picture"]];
-    
+
     randomlyGeneratedUser.userFullName = [NSString stringWithFormat:@"%@ %@",
                                            [generatedUsers valueForKeyPath:@"user.name.first"],
                                            [generatedUsers valueForKeyPath:@"user.name.last"]];
@@ -98,14 +93,8 @@
     cell.userName.text = [randomlyGeneratedUser.userFullName capitalizedString];
     cell.userAddress.text = [randomlyGeneratedUser.userStreetAddress capitalizedString];
     cell.userCityStateZip.text = [randomlyGeneratedUser.userCityStateZip capitalizedString];
-    [cell.userProfileImage setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:[generatedUsers valueForKeyPath:@"user.picture.medium"]] placeholderImage:[UIImage imageNamed:@"blankImage"]];
 
-    //Creates circular user profile image
-    CALayer *imageLayer = cell.userProfileImage.layer;
-    [imageLayer setCornerRadius:cell.userProfileImage.layer.bounds.size.height/2];
-    [imageLayer setBorderWidth:0];
-    [imageLayer setMasksToBounds:YES];
-    
     return cell;
 }
 
@@ -115,4 +104,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)share:(id)sender {
+    NSString *string = @"Test";
+    NSURL *URL = [NSURL URLWithString:@"http://www.google.com"];
+
+//    UIApplication.sharedApplication().openURL(NSURL(string: "www.google.com"))
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"]];
+//    UIActivityViewController *activityViewController =
+//    [[UIActivityViewController alloc] initWithActivityItems:@[string, URL]
+//                                      applicationActivities:nil];
+//    [self.navigationController presentViewController:activityViewController
+//                                       animated:YES
+//                                     completion:^{
+//                                         // ...
+//                                     }];
+}
 @end

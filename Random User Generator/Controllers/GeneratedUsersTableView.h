@@ -12,5 +12,7 @@
 
 @property (nonatomic, strong) NSMutableArray *randomlyGeneratedUsersArray;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+- (IBAction)share:(id)sender;
+
 
 @end

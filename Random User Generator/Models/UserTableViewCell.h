@@ -15,5 +15,4 @@
 @property (strong, nonatomic) IBOutlet UILabel *userAddress;
 @property (strong, nonatomic) IBOutlet UILabel *userCityStateZip;
 
-
 @end
