@@ -3,7 +3,7 @@
 //  Fluky
 //
 //  Created by Greg Barbosa on 9/16/14.
-//  Copyright (c) 2014 PolaritySoftware. All rights reserved.
+//  Copyright (c) 2014 Tiny Tugboats. All rights reserved.
 //
 
 import UIKit
@@ -61,16 +61,7 @@ class TTAbout: UITableViewController {
         }
 
     }
-    /*
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
+    
     /*
     // MARK: - Navigation
 

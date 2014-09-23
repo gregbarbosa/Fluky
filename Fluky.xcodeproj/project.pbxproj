@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		276E01B51919F40C001C961D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276E01B41919F40C001C961D /* Images.xcassets */; };
+		27707DAE19D137730055B9A5 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27707DAD19D137730055B9A5 /* Launch Screen.xib */; };
 		277477C4189A1ED800146FB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C3189A1ED800146FB4 /* Foundation.framework */; };
 		277477C6189A1ED800146FB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C5189A1ED800146FB4 /* CoreGraphics.framework */; };
 		277477C8189A1ED800146FB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277477C7189A1ED800146FB4 /* UIKit.framework */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		275C88F819C7FB3B00A61878 /* Fluky-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fluky-Bridging-Header.h"; sourceTree = "<group>"; };
 		276E01B41919F40C001C961D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		27707DAD19D137730055B9A5 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		277477C0189A1ED800146FB4 /* Fluky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fluky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277477C3189A1ED800146FB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		277477C5189A1ED800146FB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -179,6 +181,7 @@
 			children = (
 				276E01B41919F40C001C961D /* Images.xcassets */,
 				277477F8189A1F0300146FB4 /* Main.storyboard */,
+				27707DAD19D137730055B9A5 /* Launch Screen.xib */,
 				277477FE189A1F7E00146FB4 /* Models */,
 				277477FD189A1F6C00146FB4 /* Controllers */,
 				277477D4189A1ED800146FB4 /* AppDelegate.h */,
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				276E01B51919F40C001C961D /* Images.xcassets in Resources */,
+				27707DAE19D137730055B9A5 /* Launch Screen.xib in Resources */,
 				277477D0189A1ED800146FB4 /* InfoPlist.strings in Resources */,
 				277477F9189A1F0300146FB4 /* Main.storyboard in Resources */,
 			);
@@ -532,12 +536,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Random User Generator/Fluky-Prefix.pch";
 				INFOPLIST_FILE = "Random User Generator/Fluky-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Fluky;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Random User Generator/Fluky-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -551,12 +557,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Random User Generator/Fluky-Prefix.pch";
 				INFOPLIST_FILE = "Random User Generator/Fluky-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Fluky;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Random User Generator/Fluky-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};

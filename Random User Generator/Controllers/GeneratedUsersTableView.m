@@ -3,7 +3,7 @@
 //  Random User Generator
 //
 //  Created by Greg Barbosa on 1/30/14.
-//  Copyright (c) 2014 PolaritySoftware. All rights reserved.
+//  Copyright (c) 2014 Tiny Tugboats. All rights reserved.
 //
 
 #import "GeneratedUsersTableView.h"
@@ -104,19 +104,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)share:(id)sender {
-    NSString *string = @"Test";
-    NSURL *URL = [NSURL URLWithString:@"http://www.google.com"];
-
-//    UIApplication.sharedApplication().openURL(NSURL(string: "www.google.com"))
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"]];
-//    UIActivityViewController *activityViewController =
-//    [[UIActivityViewController alloc] initWithActivityItems:@[string, URL]
-//                                      applicationActivities:nil];
-//    [self.navigationController presentViewController:activityViewController
-//                                       animated:YES
-//                                     completion:^{
-//                                         // ...
-//                                     }];
-}
 @end

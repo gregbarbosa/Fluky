@@ -21,7 +21,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="55E924F6-E8AA-4F8A-8379-16758F0A3D98" translatesAutoresizingMaskIntoConstraints="NO" id="Zt2-V6-LJV">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3E4B0F20-12E5-4466-BF6D-5988A11561CB" translatesAutoresizingMaskIntoConstraints="NO" id="Zt2-V6-LJV">
                                             <rect key="frame" x="8" y="8" width="64" height="64"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7m-5j-4AA">
@@ -60,12 +60,6 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="DeI-97-4j2" kind="push" id="teC-uj-qI8"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dRD-Sc-0jM">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="share:" destination="B3K-FP-sAV" id="hlw-QV-mWF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -234,7 +228,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="55E924F6-E8AA-4F8A-8379-16758F0A3D98" width="200" height="200">
+        <image name="3E4B0F20-12E5-4466-BF6D-5988A11561CB" width="200" height="200">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
